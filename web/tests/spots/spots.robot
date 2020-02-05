@@ -1,5 +1,5 @@
 *** Settings ***
-Resource  ../resources/steps.robot
+Resource  ../../resources/spot_steps.robot
 Documentation  Spots
 ...  Para que eu possa disponibilizar spots de empresas para Devs e QAs
 ...  Sendo um admin de spots
@@ -18,7 +18,10 @@ Novo Spot
     Quando faço o cadastro deste spot
     Então devo ver o spot e a valor da diaria no dashboard
 
-## Desafio
-### Criar outros scenarios de criação do spot
-#### Spot sem o nome da empresa
-##### Live #2
+Spot sem o nome da empresa
+    Dado que eu tenho um spot disponivel na empresa "Acme"
+    E este spot possui a imagem "acme.jpg"
+    E usamos as seguintes tecnologias "node, python"
+    E o valor da diaria é "15" reais
+    Quando faço o cadastro deste spot
+    Então devo ver o spot e a valor da diaria no dashboard

@@ -1,9 +1,9 @@
 *** Settings ***
+Resource  ../../resources/login_steps.robot
 Documentation  Sessão
 ...  Para que eu possa ter acesso a interface de administração de spots
 ...  Sendo um usuario que possui um email
 ...  Quero poder iniciar uma nova sessão
-Resource  ../resources/steps.robot
 Test Setup  Abrir Navegador
 Test Teardown  Fechar Navegador
 
@@ -28,8 +28,3 @@ Tentativa de Login
     Dado que "${email}" é o meu email
     Quando eu entro com este email
     Então devo ver o alerta "${expected_message}"
-
-# Desafio
-
-# Trocar a Mensagem de alerta para argumentos dentro do template
-## DONE!
